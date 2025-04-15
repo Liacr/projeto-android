@@ -1,0 +1,261 @@
+:root {
+  --cor-primaria: #295f3e;
+  --cor-secundaria: #3d914a;
+  --cor-destaque: #2FA866;
+  --cor-destaque-claro: #78ba8a;
+  --cor-fundo-claro: #e6f4ec;
+  --cor-fundo-escuro: #002f11;
+  --cor-texto: #333;
+  --cor-branca: #ffffff;
+  --cor-link: #55aa48;
+  --cor-link-hover: #50bb54;
+  --cor-sombra: rgba(0, 0, 0, 0.408);
+  --cor-check: #5bbb50;
+
+  --gradiente-header: linear-gradient(to top, var(--cor-destaque), var(--cor-destaque-claro));
+  --gradiente-titulo: linear-gradient(to right, #adffc3, transparent);
+
+  --cor-hover-nav: rgba(255, 255, 255, 0.2);
+}
+
+@font-face {
+  font-family: 'idroid';
+  src: url(/recursos/idroid.otf) format(opentype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo-claro);
+}
+
+header {
+  background: var(--gradiente-header);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  z-index: 100;
+}
+
+header p {
+  text-indent: 0%;
+  padding: 2px;
+}
+
+.header-titulo {
+  font-family: 'Arial', sans-serif;
+  color: #f9f9f9;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.54);
+  margin-top: 15px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.texto-nav {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  transition-duration: .5s;
+}
+
+nav a:hover {
+  background-color: var(--cor-hover-nav);
+}
+
+main {
+  max-width: auto;
+  margin: 0 20vh;
+}
+
+article {
+  background: var(--cor-branca);
+  border-radius: 0px 0px 8px 8px;
+  padding: 2rem;
+  box-shadow: 5px 3px 15px 3px var(--cor-sombra);
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'idroid';
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: 'idroid';
+  color: var(--cor-secundaria);
+  background: var(--gradiente-titulo);
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+}
+
+main p {
+  text-align: justify;
+}
+
+p {
+  text-indent: 20px;
+  line-height: 2em;
+}
+
+.aside-container > p {
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--cor-primaria);
+}
+
+.imagem-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.imagem-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.video-container {
+  background-color: var(--cor-fundo-escuro);
+  position: relative;
+  margin: 5px -32px 15px -32px;
+  padding-bottom: 60%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+h3 {
+  color: var(--cor-branca);
+  background-color: var(--cor-destaque);
+  border-radius: 15px 15px 0px 0px;
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+}
+
+aside {
+  background-color: var(--cor-fundo-claro);
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.282);
+} 
+
+ul.lista {
+  columns: 2;
+  list-style-type: none;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+ul.lista li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+ul.lista li:before {
+  content: "✅";
+  color: var(--cor-check);
+  position: absolute;
+  left: 0;
+}
+
+a.link-externo {
+  color: var(--cor-link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.link-externo:after {
+  content: " 🔗";
+  font-size: 0.8em;
+}
+
+a.link-externo:hover {
+  text-decoration: underline;
+  color: var(--cor-link-hover);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-branca);
+  padding: 10px;
+  text-align: center;
+}
+
+span {
+  font-weight: bolder;
+}
+
+/* Responsividade */
+@media (max-width: 980px) {
+
+  main {
+    margin: 0 5vh;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  article {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .video-container {
+    margin: 5px -24px 15px -24px;
+    padding-bottom: 62%;
+  }
+
+  ul.lista {
+    columns: 1;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links a {
+    margin: 0.3rem 0;
+  }
+}
